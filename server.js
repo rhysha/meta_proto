@@ -20,7 +20,7 @@ app.use(bodyParser.json({ limit: '5mb' }));
 app.use(bodyParser.urlencoded({ limit: '5mb', extended: true, parameterLimit: 1000000 }))
 app.use(morgan('dev'));
 app.get('/', function (request, response) {
-  epubParser.parse("./epub/The-Secret-Adversary.pdf.epub", './doc/', book => {
+  epubParser.parse("./epub/The-Secret-Adversary.epub", './doc/', book => {
     console.log(book);
   });
 });
