@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+  <metadata xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dc:creator opf:file-as="Unknown" opf:role="aut">Agatha Christie</dc:creator>
+    <dc:contributor opf:role="bkp">calibre (3.37.0) [https://calibre-ebook.com]</dc:contributor>
+    <dc:language>en</dc:language>
+    <dc:title>The Secret Adversary</dc:title>
+    <dc:subject>Beresford</dc:subject>
+    <dc:subject>Tommy (Fictitious character) -- Fiction</dc:subject>
+    <dc:subject>Domestic fiction</dc:subject>
+    <dc:subject>Private investigators -- England -- Fiction</dc:subject>
+    <dc:subject>Tuppence (Fictitious character) -- Fiction</dc:subject>
+    <dc:subject>Missing persons -- Fiction</dc:subject>
+    <dc:subject>Married people -- Fiction</dc:subject>
+    <dc:subject>Detective and mystery stories</dc:subject>
+    <meta name="cover" content="cover"/>
+    <dc:date>1998-01-01T00:00:00+00:00</dc:date>
+    <meta name="calibre:timestamp" content="2022-03-26T11:08:40.820916+00:00"/>
+    <dc:identifier id="uuid_id" opf:scheme="uuid">084763be-6e46-4bf4-889c-b78f9e51abe8</dc:identifier>
+  </metadata>
+  <manifest>
+    <item href="cover_image.jpg" id="cover" media-type="image/jpeg"/>
+    <item href="index-1_1.jpg" id="id3" media-type="image/jpeg"/>
+    <item href="index_split_000.html" id="id15" media-type="application/xhtml+xml"/>
+    <item href="index_split_001.html" id="id14" media-type="application/xhtml+xml"/>
+    <item href="index_split_002.html" id="id13" media-type="application/xhtml+xml"/>
+    <item href="index_split_003.html" id="id12" media-type="application/xhtml+xml"/>
+    <item href="index_split_004.html" id="id11" media-type="application/xhtml+xml"/>
+    <item href="page_styles.css" id="page_css" media-type="text/css"/>
+    <item href="stylesheet.css" id="css" media-type="text/css"/>
+    <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="titlepage"/>
+    <itemref idref="id15"/>
+    <itemref idref="id14"/>
+    <itemref idref="id13"/>
+    <itemref idref="id12"/>
+    <itemref idref="id11"/>
+  </spine>
+  <guide>
+    <reference href="titlepage.xhtml" title="Title Page" type="cover"/>
+  </guide>
+</package>

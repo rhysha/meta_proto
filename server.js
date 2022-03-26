@@ -25,8 +25,8 @@ app.get('/', function (request, response) {
   });
 });
 app.post('/upload', async (req, res) => {
-  try {
-    console.log(req.files)
+ // try {
+    //console.log(req.files)
     if (!req.files) {
       res.send({
         status: false,
@@ -34,35 +34,25 @@ app.post('/upload', async (req, res) => {
       });
     } else {
       //Use the name of the input field (i.e. "avatar") to retrieve the uploaded file
-      let avatar = req.files.avatar;
+      let file = req.files.book;
 
       //Use the mv() method to place the file in upload directory (i.e. "uploads")
-      avatar.mv('./uploads/' + avatar.name);
+      file.mv('./uploads/' + file.name);
 
       await ebookConverter.convert({
-        input: "./uploads/" + avatar.name,
-        output: "./epub/" + avatar.name + ".epub"
+        input: "./uploads/" + file.name,
+        output: "./epub/" + file.name + ".epub"
       }).then(response => console.log(response))
         .catch(error => console.error(error));
 
 
-      epubParser.parse("./epub/" + avatar.name + ".epub", './doc/', book => {
-        console.log(book);
-      });
+      epubParser.parse("./epub/" + file.name + ".epub", './doc/', book => res.json(book));
       //send response
-      res.send({
-        status: true,
-        message: 'File is uploaded',
-        data: {
-          name: avatar.name,
-          mimetype: avatar.mimetype,
-          size: avatar.size
-        }
-      });
+     
     }
-  } catch (err) {
-    res.status(500).send(err);
-  }
+  // } catch (err) {
+  //   res.status(500).send(err);
+  // }
 });
 var port = process.env.PORT || 5003;
 
