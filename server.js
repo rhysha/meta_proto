@@ -6,6 +6,11 @@ const morgan = require('morgan');
 const _ = require('lodash');
 const epubParser = require('epub-metadata-parser');
 const ebookConverter = require('node-ebook-converter');
+var zmq = require("zeromq"),
+  sock = zmq.socket("push");
+
+sock.bindSync("tcp://127.0.0.1:3001");
+console.log("Producer bound to port 3000");
 
 var app = express();
 //app.use(express.logger());
@@ -38,15 +43,19 @@ app.post('/upload', async (req, res) => {
 
       //Use the mv() method to place the file in upload directory (i.e. "uploads")
       file.mv('./uploads/' + file.name);
+      sock.send(file.name);
+      res.send({
+        stauts:true,
+        message: "Book Uploaded"
+      })
+      // await ebookConverter.convert({
+      //   input: "./uploads/" + file.name,
+      //   output: "./epub/" + file.name + ".epub"
+      // }).then(response => console.log(response))
+      //   .catch(error => console.error(error));
 
-      await ebookConverter.convert({
-        input: "./uploads/" + file.name,
-        output: "./epub/" + file.name + ".epub"
-      }).then(response => console.log(response))
-        .catch(error => console.error(error));
 
-
-      epubParser.parse("./epub/" + file.name + ".epub", './doc/', book => res.json(book));
+      // epubParser.parse("./epub/" + file.name + ".epub", './doc/', book => res.json(book));
       //send response
      
     }
