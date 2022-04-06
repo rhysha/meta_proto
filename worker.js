@@ -9,9 +9,9 @@ sock.connect("tcp://127.0.0.1:3001");
 console.log("Worker connected to port 3000");
 var user = 'citizix';
 var password = 'S3cret';
-var authMechanism = 'DEFAULT';
 var url = f('mongodb://%s:%s@localhost:27017',
   user, password);
+const { exec } = require("child_process");  
 
 var MongoClient = require('mongodb').MongoClient;
 

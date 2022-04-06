@@ -30,6 +30,7 @@
     "mongodb": "^4.5.0",
     "morgan": "^1.10.0",
     "node-ebook-converter": "^1.0.11",
+    "nodepub": "^3.0.8",
     "zeromq": "^5.2.8"
   }
 }
