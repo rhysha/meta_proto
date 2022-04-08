@@ -107,7 +107,14 @@ app.post('/book/:id/meta', async (req, res) => {
 
   console.log(cmd)
   await exec(cmd, (error, stdout, stderr) => {console.log(stdout)});
-
+  const filter = {_id:o_id};
+  const options = {} //{ upsert: true };
+  const updateDoc = {
+    $set: {
+      plot: `A harvest of random numbers, such as: ${Math.random()}`
+    },
+  };
+  const result = await movies.updateOne(filter, updateDoc, options);
   res.json({status:true,result:"Meta Updated for "+findResult[0]['filename']})
 });
 
