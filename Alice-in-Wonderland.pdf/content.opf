@@ -1,19 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
 <package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
   <metadata xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <dc:date>2006-10-16T00:00:00+00:00</dc:date>
-    <meta name="cover" content="cover"/>
+    <dc:contributor opf:role="bkp">calibre (3.37.0) [https://calibre-ebook.com]</dc:contributor>
+    <dc:title>Alice in Wonderland, Retold in Words of One Syllable</dc:title>
+    <dc:language>en</dc:language>
+    <dc:creator opf:file-as="Unknown" opf:role="aut">Lewis Carroll</dc:creator>
+    <dc:creator opf:file-as="Unknown" opf:role="aut">Mrs. J. C. Gorham</dc:creator>
     <dc:subject>Children's stories</dc:subject>
     <dc:subject>Alice (Fictitious character from Carroll) -- Juvenile fiction</dc:subject>
     <dc:subject>Fantasy fiction</dc:subject>
     <dc:subject>Imaginary places -- Juvenile fiction</dc:subject>
-    <meta name="calibre:timestamp" content="2022-04-08T13:05:43.332467+00:00"/>
-    <dc:contributor opf:role="bkp">calibre (3.37.0) [https://calibre-ebook.com]</dc:contributor>
-    <dc:language>en</dc:language>
-    <dc:title>Alice in Wonderland, Retold in Words of One Syllable</dc:title>
-    <dc:creator opf:file-as="Unknown" opf:role="aut">Lewis Carroll</dc:creator>
-    <dc:creator opf:file-as="Unknown" opf:role="aut">Mrs. J. C. Gorham</dc:creator>
-    <dc:identifier id="uuid_id" opf:scheme="uuid">50f5323f-4a48-4d86-92c4-3e3c8af51257</dc:identifier>
+    <meta name="cover" content="cover"/>
+    <dc:identifier id="uuid_id" opf:scheme="uuid">161eff5d-dbd5-4dcd-a6be-2b54e79955e5</dc:identifier>
+    <meta name="calibre:timestamp" content="2022-04-08T13:15:44.489878+00:00"/>
+    <dc:date>2006-10-16T00:00:00+00:00</dc:date>
   </metadata>
   <manifest>
     <item href="cover_image.jpg" id="cover" media-type="image/jpeg"/>

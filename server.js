@@ -111,10 +111,13 @@ app.post('/book/:id/meta', async (req, res) => {
   const options = {} //{ upsert: true };
   const updateDoc = {
     $set: {
-      plot: `A harvest of random numbers, such as: ${Math.random()}`
+      title:title,
+      author:author,
+      cover:cover
     },
   };
-  const result = await movies.updateOne(filter, updateDoc, options);
+  const result = await collection.updateOne(filter, updateDoc, options);
+  console.log(result)
   res.json({status:true,result:"Meta Updated for "+findResult[0]['filename']})
 });
 
