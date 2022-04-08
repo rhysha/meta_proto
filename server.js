@@ -86,14 +86,25 @@ app.post('/book/:id/meta', async (req, res) => {
   let tags = req.body.tags
 
 
+  // let cmd = f("ebook-meta ./epub/%s --title %s --authors=%s --cover=%s  --publisher=%s --isbn=%s --tags=%s",
+  // findResult[0]['filename'],
+  // "sdasdasdsa",
+  // "rhysha",
+  // "test.jpg",
+  // "PentaGlobal",
+  // "id:859432",
+  // "world,hello")
+
+
   let cmd = f("ebook-meta ./epub/%s --title %s --authors=%s --cover=%s  --publisher=%s --isbn=%s --tags=%s",
   findResult[0]['filename'],
-  "sdasdasdsa",
-  "rhysha",
-  "test.jpg",
-  "PentaGlobal",
-  "id:859432",
-  "world,hello")
+  title,
+  author,
+  cover,
+  publisher,
+  isbn,
+  tags)
+
   console.log(cmd)
   await exec(cmd, (error, stdout, stderr) => {console.log(stdout)});
 
