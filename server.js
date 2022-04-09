@@ -15,7 +15,7 @@ const { exec } = require("child_process");
 const zmq = require("zeromq"),
   sock = zmq.socket("push");
 
-sock.bindSync("tcp://127.0.0.1:3001");
+sock.bindSync("tcp://127.0.0.1:3002");
 console.log("Producer bound to port 3000");
 
 const app = express();
@@ -96,7 +96,7 @@ app.post('/book/:id/meta', async (req, res) => {
   // "world,hello")
 
 
-  let cmd = f("ebook-meta ./epub/%s --title %s --authors=%s --cover=%s  --publisher=%s --isbn=%s --tags=%s",
+  let cmd = f("ebook-meta './epub/%s' --title '%s' --authors=%s --cover=%s  --publisher='%s' --isbn=%s --tags=%s",
   findResult[0]['filename'],
   title,
   author,
@@ -113,7 +113,11 @@ app.post('/book/:id/meta', async (req, res) => {
     $set: {
       title:title,
       author:author,
-      cover:cover
+      cover:cover,
+      publisher:publisher,
+      isbn:isbn,
+      tags:tags
+
     },
   };
   const result = await collection.updateOne(filter, updateDoc, options);

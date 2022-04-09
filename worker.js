@@ -5,7 +5,7 @@ var MongoClient = require('mongodb').MongoClient;
 const ebookConverter = require('node-ebook-converter');
 const epubParser = require('epub-metadata-parser');
 f = require('util').format,
-sock.connect("tcp://127.0.0.1:3001");
+sock.connect("tcp://127.0.0.1:3002");
 console.log("Worker connected to port 3000");
 var user = 'citizix';
 var password = 'S3cret';
