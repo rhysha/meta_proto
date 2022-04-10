@@ -26,6 +26,7 @@ sock.on("message", async function (msg) {
     .catch(error => console.error("ERROR",error));
   // parse
   epubParser.parse("./epub/"+msg.toString()+".epub" , './doc/', book => {
+    console.log(book);
     console.log(book.author,book.title,book.subject,book.language,book.pubdate,book.fileName);
     MongoClient.connect(url, function(err, db) {
       if (err) throw err;
@@ -38,8 +39,7 @@ sock.on("message", async function (msg) {
       });
     });
   });
-  // meta extraction
-  
+ 
   // save in db
 
 });

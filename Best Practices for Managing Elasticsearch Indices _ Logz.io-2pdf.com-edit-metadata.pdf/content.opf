@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+  <metadata xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dc:language>en</dc:language>
+    <dc:creator opf:file-as="Unknown" opf:role="aut">temporary author</dc:creator>
+    <meta name="calibre:timestamp" content="2022-04-09T06:37:44.483087+00:00"/>
+    <dc:title>temporary title</dc:title>
+    <meta name="cover" content="cover"/>
+    <dc:contributor opf:role="bkp">calibre (3.21.0) [https://calibre-ebook.com]</dc:contributor>
+    <dc:identifier id="uuid_id" opf:scheme="uuid">7c200e56-3928-4451-8ccf-04fbb8957a9e</dc:identifier>
+    <dc:subject>Temp Subject</dc:subject>
+    <dc:subject>temp keywordes  temp keywordes2 temp keywordes3</dc:subject>
+  </metadata>
+  <manifest>
+    <item href="cover_image.jpg" id="cover" media-type="image/jpeg"/>
+    <item href="index-10_1.png" id="id2" media-type="image/png"/>
+    <item href="index-10_2.png" id="id15" media-type="image/png"/>
+    <item href="index-10_3.png" id="id9" media-type="image/png"/>
+    <item href="index-10_4.png" id="id12" media-type="image/png"/>
+    <item href="index-10_5.png" id="id10" media-type="image/png"/>
+    <item href="index-10_6.png" id="id8" media-type="image/png"/>
+    <item href="index-10_7.png" id="id5" media-type="image/png"/>
+    <item href="index-10_8.png" id="id3" media-type="image/png"/>
+    <item href="index-1_1.jpg" id="id4" media-type="image/jpeg"/>
+    <item href="index-1_2.jpg" id="id6" media-type="image/jpeg"/>
+    <item href="index-6_1.png" id="id11" media-type="image/png"/>
+    <item href="index-8_1.jpg" id="id13" media-type="image/jpeg"/>
+    <item href="index-9_1.jpg" id="id7" media-type="image/jpeg"/>
+    <item href="index-9_2.jpg" id="id14" media-type="image/jpeg"/>
+    <item href="index.html" id="id1" media-type="application/xhtml+xml"/>
+    <item href="page_styles.css" id="page_css" media-type="text/css"/>
+    <item href="stylesheet.css" id="css" media-type="text/css"/>
+    <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="titlepage"/>
+    <itemref idref="id1"/>
+  </spine>
+  <guide>
+    <reference href="titlepage.xhtml" title="Title Page" type="cover"/>
+  </guide>
+</package>

@@ -117,7 +117,6 @@ app.post('/book/:id/meta', async (req, res) => {
       publisher:publisher,
       isbn:isbn,
       tags:tags
-
     },
   };
   const result = await collection.updateOne(filter, updateDoc, options);
